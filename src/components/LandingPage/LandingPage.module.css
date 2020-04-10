@@ -8,6 +8,14 @@
     ". about about about ."
     ". navDestination navArrow . .";
 }
+.fixedHeader {
+  position: fixed;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
+  grid-template-rows: 10vh;
+  grid-template-areas: "switch openQuickLinks quickLinks openQuickLinks2 .";
+}
 
 .headers {
   grid-area: title;

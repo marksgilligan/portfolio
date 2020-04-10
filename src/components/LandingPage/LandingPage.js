@@ -54,17 +54,18 @@ function LandingPage() {
 
   return (
     <div className={css.landingPageGrid}>
-      <ThemeButton
-        theme={theme}
-        setTheme={setTheme}
-        handleThemeClick={handleThemeClick}
-      />
-      {!quickLinks ? (
-        <QuickLinks handleQuickLinksClick={handleQuickLinksClick} />
-      ) : (
-        <QuickLinksOpen handleQuickLinksClick={handleQuickLinksClick} />
-      )}
-
+      <section className={css.fixedHeader}>
+        <ThemeButton
+          theme={theme}
+          setTheme={setTheme}
+          handleThemeClick={handleThemeClick}
+        />
+        {!quickLinks ? (
+          <QuickLinks handleQuickLinksClick={handleQuickLinksClick} />
+        ) : (
+          <QuickLinksOpen handleQuickLinksClick={handleQuickLinksClick} />
+        )}
+      </section>
       <article className={css.headers}>
         <h1 className={css.mainHeader}>Mark Gilligan</h1>
         <h3 className={css.subHeader}>Junior Developer</h3>
