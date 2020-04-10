@@ -1,0 +1,64 @@
+.quickLinks {
+  display: grid;
+  grid-template-columns: 1em repeat(4, 1fr) 1em;
+  grid-template-areas: " . home journey projects other close";
+  justify-content: center;
+  justify-self: center;
+  height: 40%;
+  grid-area: quickLinks;
+  opacity: 1;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--third-color);
+  transition: all 0.6s;
+  width: 200%;
+}
+
+#quickLinks {
+  opacity: 0.5;
+  line-height: 0;
+  color: var(--primary-color);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+#quickLinks:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.quickLinksText:hover {
+  opacity: 1;
+  transition: all 0.3s;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.quickLinksTextHome {
+  grid-area: home;
+}
+.quickLinksTextJourney {
+  grid-area: journey;
+}
+.quickLinksTextProjects {
+  grid-area: projects;
+}
+.quickLinksTextOther {
+  grid-area: other;
+}
+
+.quickLinksTextClose {
+  padding-right: 1em;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0.5;
+  grid-area: close;
+  line-height: 0;
+  color: var(--primary-color);
+  text-align: center;
+  cursor: pointer;
+}
+.quickLinksTextClose:hover {
+  transition: all 0.3s;
+  cursor: pointer;
+  opacity: 1;
+}

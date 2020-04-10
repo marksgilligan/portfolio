@@ -1,0 +1,79 @@
+.landingPageGrid {
+  display: grid;
+  grid-template-columns: 10vw 1fr 1fr 1fr 10vw;
+  grid-template-rows: 10vh 40vh 40vh 10vh;
+  grid-template-areas:
+    "switch openQuickLinks quickLinks openQuickLinks2 ."
+    ". title title title ."
+    ". about about about ."
+    ". navDestination navArrow . .";
+}
+
+.headers {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainHeader {
+  margin: 0.2em;
+  color: var(--primary-text-color);
+  font-size: 120px;
+}
+.subHeader {
+  margin: 0.2em;
+  color: var(--primary-text-color);
+  font-size: 60px;
+}
+
+.about {
+  display: flex;
+  padding: 3em;
+  justify-content: center;
+  grid-area: about;
+  color: var(--primary-text-color);
+}
+
+.navDestination {
+  justify-self: right;
+  grid-area: navDestination;
+  color: var(--primary-text-color);
+}
+
+#section02 {
+  position: relative;
+  grid-area: navArrow;
+  background: url(https://www.nxworld.net/example/css-scroll-down-button/bg02.jpg)
+    center center / cover no-repeat;
+}
+
+#section02 a {
+  padding-top: 60px;
+}
+
+#section02 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid var(--third-color);
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section02 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid var(--third-color);
+  border-bottom: 1px solid var(--third-color);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}

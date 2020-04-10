@@ -1,0 +1,76 @@
+.switchArea {
+  grid-area: switch;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1em 1em;
+  grid-template-areas:
+    "title"
+    "switch";
+}
+
+.themeText {
+  display: flex;
+  line-height: 0;
+  color: var(--primary-text-color);
+}
+
+.switch {
+  grid-area: switch;
+  margin-left: 1em;
+  position: relative;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.sliderRound {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.sliderRound:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .sliderRound {
+  background-color: var(--third-color);
+}
+
+input:checked + .sliderRound:before {
+  background-color: var(--primary-color);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.sliderRound {
+  border-radius: 34px;
+}
+
+.sliderRound:before {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+.sliderRound:after {
+  border-radius: 50%;
+}
